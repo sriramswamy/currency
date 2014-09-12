@@ -18,6 +18,13 @@ describe('currency', function() {
                 assert.equal('United States', currency.country());
         })
 
+        it('should return undefined', function() {
+                var currency = new Currency('xxx');
+                assert.equal(undefined, currency.name());
+                assert.equal(undefined, currency.symbol());
+                assert.equal(undefined, currency.country());
+        })
+
         it('should return correct country name and symbol with get', function() {
                 var currency = new Currency().get('INR');
                 assert.equal('Indian Rupee', currency.name);
