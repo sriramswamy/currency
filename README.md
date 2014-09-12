@@ -40,6 +40,7 @@ console.log(currency.country());
 ```js
 var currency = new Currency('XXX');
 console.log(currency.symbol);
+```
 
 **You can use the "get" method to retrieve the currency information as an object.**
 
