@@ -4,18 +4,17 @@ var Currency = require('./');
 var assert = require('assert');
 
 describe('currency', function() {
-        it('should return value', function() {
+        it('should return list of currencies', function() {
         	var currency = new Currency();
-        	console.log("------------");
-        	console.log(currency.list());
+		var lst = currency.list();
+		assert(true, Array.isArray(lst));
+                assert(true, lst.length > 0);
+        })
 
-        	var cur = currency.get('ARS');
-        	console.log(cur.name);
-		console.log(cur.symbol);
-
-        	var c1 = new Currency('awg');
-
-        	console.log(c1.name());
-        	console.log(c1.symbol());
+        it('should return correct country name and symbol', function() {
+                var currency = new Currency('usd');
+                assert(true, currency.name() === 'US Dollar');
+                assert(true, currency.symbol() === '$');
+                assert(true, currency.country === 'United States');
         })
 });
