@@ -1,0 +1,33 @@
+{
+  "name": "currncy",
+  "version": "1.0.0",
+  "description": "Find currency name, symbol and country for a currency code",
+  "license": "MIT",
+  "repository": "sriramswamy/currency",
+  "author": {
+    "name": "Sriram Swaminathan",
+    "email": "sriramswamy@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "currencies.json"
+  ],
+  "keywords": [
+    "currencies",
+    "currency",
+    "country",
+    "currency code",
+    "currency symbol",
+    "symbol"
+  ],
+  "devDependencies": {
+    "mocha": "~1.21.4"
+  }
+}
