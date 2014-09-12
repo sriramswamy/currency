@@ -13,8 +13,15 @@ describe('currency', function() {
 
         it('should return correct country name and symbol', function() {
                 var currency = new Currency('usd');
-                assert(true, currency.name() === 'US Dollar');
-                assert(true, currency.symbol() === '$');
-                assert(true, currency.country === 'United States');
+                assert.equal('US Dollar', currency.name());
+                assert.equal('$', currency.symbol());
+                assert.equal('United States', currency.country());
         })
+
+        it('should return correct country name and symbol with get', function() {
+                var currency = new Currency().get('INR');
+                assert.equal('Indian Rupee', currency.name);
+                assert.equal('₹', currency.symbol);
+                assert.equal('India', currency.country);                
+        })        
 });

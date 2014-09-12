@@ -10,18 +10,21 @@ $ npm install currncy
 
 ## Usage
 
-```js
 **Retrieve list of currency codes**
 
+```js
 var Currency = require('currncy');
 
 var currency = new Currency();
 console.log(currency.list());
 //=> ['ALL', 'AFN', ......, 'ZWD']
+```
 
-**Retrieve currency information for a particular currency. Currency code is case insensitive**
+**Retrieve currency information for a particular currency. Currency code is case insensitive.**
 
-var currency = new Currency('USD'); **(or)** var currency = new Currency('usd');
+```js
+var currency = new Currency('usd'); 
+
 console.log(currency.symbol());
 //=> $
 
@@ -30,9 +33,17 @@ console.log(currency.name());
 
 console.log(currency.country());
 //=> United States
+```
 
-**(OR)**
+**undefined is returned in case currency code is not found**
 
+```js
+var currency = new Currency('XXX');
+console.log(currency.symbol);
+
+**You can use the "get" method to retrieve the currency information as an object.**
+
+```js
 var currency = new Currency().get('INR');
 console.log(currency.symbol);
 //=> 

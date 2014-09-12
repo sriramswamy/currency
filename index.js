@@ -26,14 +26,23 @@ Currency.prototype = {
 	},
 
 	country: function() {
-		return this.currency.country;
+		if( undefined === this.currency ) {
+			return undefined;
+		}
+ 		return this.currency.country;
 	},
 
 	name: function() {
+		if( undefined === this.currency ) {
+			return undefined;
+		}		
 		return this.currency.name;
 	},
 
 	symbol: function() {
+		if( undefined === this.currency ) {
+			return undefined;
+		}		
 		return this.currency.symbol;
 	}
 };
