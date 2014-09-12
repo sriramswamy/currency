@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ npm install currency
+$ npm install currncy
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ $ npm install currency
 ```js
 ### Retrieve list of currency codes
 
-var Currency = require('currency');
+var Currency = require('currncy');
 
 var currency = new Currency();
 console.log(currency.list());
