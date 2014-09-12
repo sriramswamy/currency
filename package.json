@@ -1,6 +1,6 @@
 {
   "name": "currncy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find currency name, symbol and country for a currency code",
   "license": "MIT",
   "repository": "sriramswamy/currency",
